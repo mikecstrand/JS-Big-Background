@@ -1,0 +1,62 @@
+Big Background JS - adjusts a background image to fill any screensize.
+
+Also allows for scrolling back and forth between a list of images.
+
+swipe.js small function for allowing swiping on mobile devices.
+
+Default image size 1500 by 1200, give img attr desktop for this and use the src for the mobile version - assumed to be 750 by 600 in size
+
+// JS
+
+var bgImageManage = new backgroundImages();	
+		bgImageManage.init(CAN PASS IS MOBILE VAR IN HERE);
+
+// CSS
+#background {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:90;
+	overflow:hidden;
+}
+
+#background ul {
+	width:99999px;
+	margin:0;
+}
+
+#background ul li {
+	display:block;
+	float:left;
+}
+
+#background img {
+	width:100%;
+	height:100%;
+	float:left;
+}
+
+// IF USING CONTROLS?
+#backgroundcontrols {
+	position:absolute;
+	left:0;
+	top:50%;
+	z-index:95;
+	width:100%;
+}
+
+#backgroundcontrols a {
+	display:block;
+	background:url(../images/icons/arrows.png) 0 0 no-repeat;
+	width:124px;
+	height:117px;
+	float:left;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#backgroundcontrols a.next {
+	float:right;
+	background-position:-124px 0;
+}
